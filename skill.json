@@ -1,0 +1,41 @@
+{
+  "name": "genpark-agent-tool-call-circuit-breaker-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Fault-tolerant tool execution circuit breaker detecting cascading upstream errors and triggering automated fallback routing.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agentic-infrastructure",
+  "tags": [
+    "circuit-breaker",
+    "tool-call-resilience",
+    "fault-tolerance",
+    "fallback-routing",
+    "agentic-reliability"
+  ],
+  "inputs": {
+    "tool_name": {
+      "type": "string",
+      "default": "web_search_mcp"
+    },
+    "fallback_tool": {
+      "type": "string",
+      "default": "brave_search_api"
+    }
+  },
+  "outputs": {
+    "evaluation_id": {
+      "type": "string"
+    },
+    "circuit_state": {
+      "type": "string"
+    },
+    "active_execution_route": {
+      "type": "string"
+    },
+    "action_directive": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
